@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Theme title-->
+     <title>Hemoglobin | Dashboard</title>
+
+    <!-- all included css file link -->
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables.min.css">
+
+
+    <!-- Theme style -->
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+
+     <!-- Navbar -->
+	<aside class="sidebar_area">
+        <div class="sidebar-image">
+            <img src="../../images/logo.png" alt="logo image">
+        </div>
+		<ul>
+			<li><a href="../../index.html"><i class="menu-icon fa fa-laptop"></i> Dashboard</a></li>
+			<li><a href="../../pages/donor/donor.html"><i class="fa fa-bars"></i> Donor</a></li>
+			<li><a href="../../pages/request/request.html"><i class="fa fa-bell"></i> Request</a></li>
+			<li><a href="stock.html" class="active"><i class="fa fa-fire"></i> Stock</a></li>
+			<li><a href=""><i class="fa fa-bars"></i> Review</a></li>
+			<li><a href=""><i class="fa fa-exclamation-triangle"></i> LogOut</a></li>
+		</ul>
+	</aside>
+
+
+    <!-- page main section -->
+	<section class="main_section">
+
+         <!-- header -->
+        <header class="header_area">
+            <div class="search">
+                <form>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Search here..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <button type="submit" class="input-group-text btn btn-sm" id="basic-addon2">Search</span>
+                    </div>
+                </form>
+            </div>
+            <div class="header_right">
+
+                <div class="profile">
+                    <img src="../../images/admin.jpg" alt="profile image">
+                </div>
+
+                <div class="notification">
+                    <a href="">
+                        <i class="fa fa-bell"></i>
+                        <span class="count bg-danger">13</span>
+                    </a>
+                </div>
+
+                <div class="massage">
+                    <a href="">
+                        <i class="fa fa-envelope"></i>
+                        <span class="count bg-primary">14</span>
+                    </a>
+                </div>
+                
+
+            </div> <!-- .header_right end -->
+        </header> <!-- .header_area end -->
+
+		
+
+        <div class="container-fluid">
+
+
+            <!-- content for stock html file -->
+                <div class="row mb-3">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="../../images/icon.png" alt="blood icon">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="text-center">
+                                            <h3>60</h3>
+                                            <p>Total Blood Stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="../../images/icon.png" alt="blood icon">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="text-center">
+                                            <h3>35</h3>
+                                            <p>Available Stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="../../images/icon.png" alt="blood icon">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="text-center">
+                                            <h3>25</h3>
+                                            <p>Total Sell</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Widgets -->
+
+
+                <!-- add stock section -->
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="box-title">Add Stock</h4>
+                            </div>
+                            <div class="card-body">
+                                <form action="" method="POST">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <p>Stock Id:
+                                            <input type="text" name="stockid" class="form-control form-control-sm" required></p>
+                                        </div>
+                                        <div class="col-md-3">
+                                           <p> Blood:
+                                            <select name="blood" required class="form-control form-control-sm">
+                                                <option value="A+">A+</option>
+                                                <option value="A-">A-</option>
+                                                <option value="B+">B+</option>
+                                                <option value="B-">B-</option>
+                                                <option value="O+">O+</option>
+                                                <option value="O-">O-</option>
+                                                <option value="AB+">AB+</option>
+                                                <option value="AB-">AB-</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p>Date:
+                                            <input type="date" name="date" class="form-control form-control-sm" required></p>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p><br>
+                                            <input type="submit" name="submit" value="Submit" class="btn btn-success btn-sm"></p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="request_area">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h4 class="box-title">Stock</h4>
+                                    <a href="#" class="btn btn-sm btn-info"><i class="fa fa-print"></i> Print</a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-stats order-table ov-h">
+                                        <table class="table table-hover" id="MyTable">
+                                            <thead>
+                                                <tr>
+                                                    <th class="serial">SL</th>
+                                                    <th>Stock Id</th>
+                                                    <th>Blood</th>
+                                                    <th>Date</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>#452586</td>
+                                                    <td>O+</td>
+                                                    <td>24/02/2019</td>
+                                                    <td>
+                                                        <a href="#" onclick="return confirm('Are your sure to sell!!?')" class="btn btn-success btn-sm">Sell</a>
+                                                        <a href="#" onclick="return confirm('Are you sure to delete!!?')" class="btn btn-danger btn-sm">Delete</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>#445286</td>
+                                                    <td>AB-</td>
+                                                    <td>30/05/2019</td>
+                                                    <td>
+                                                        <a href="#" onclick="return confirm('Are your sure to sell!!?')" class="btn btn-success btn-sm">Sell</a>
+                                                        <a href="#" onclick="return confirm('Are you sure to delete!!?')" class="btn btn-danger btn-sm">Delete</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>#452452</td>
+                                                    <td>A+</td>
+                                                    <td>14/08/2019</td>
+                                                    <td>
+                                                        <a href="#" onclick="return confirm('Are your sure to sell!!?')" class="btn btn-success btn-sm">Sell</a>
+                                                        <a href="#" onclick="return confirm('Are you sure to delete!!?')" class="btn btn-danger btn-sm">Delete</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>#454525</td>
+                                                    <td>O-</td>
+                                                    <td>14/12/2019</td>
+                                                    <td>
+                                                        <a href="#" onclick="return confirm('Are your sure to sell!!?')" class="btn btn-success btn-sm">Sell</a>
+                                                        <a href="#" onclick="return confirm('Are you sure to delete!!?')" class="btn btn-danger btn-sm">Delete</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>#445289</td>
+                                                    <td>O+</td>
+                                                    <td>24/02/2020</td>
+                                                    <td>
+                                                        <a href="#" onclick="return confirm('Are your sure to sell!!?')" class="btn btn-success btn-sm">Sell</a>
+                                                        <a href="#" onclick="return confirm('Are you sure to delete!!?')" class="btn btn-danger btn-sm">Delete</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> <!-- /.table-stats -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h4 class="box-title">Sell</h4>
+                                    <a href="#" class="btn btn-sm btn-info"><i class="fa fa-print"></i> Print</a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-stats order-table ov-h">
+                                        <table class="table table-hover" id="MyTable2">
+                                            <thead>
+                                                <tr>
+                                                    <th class="serial">SL</th>
+                                                    <th>Stock Id</th>
+                                                    <th>Blood</th>
+                                                    <th>Sell Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>#456980</td>
+                                                    <td>A+</td>
+                                                    <td>Mar 24, 2019</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>#404529</td>
+                                                    <td>AB-</td>
+                                                    <td>May 20, 2019</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>#452680</td>
+                                                    <td>O+</td>
+                                                    <td>Aug 07, 2019</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>#452673</td>
+                                                    <td>A-</td>
+                                                    <td>Dec 17, 2019</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>#458980</td>
+                                                    <td>O-</td>
+                                                    <td>Jan 11, 2020</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> <!-- /.table-stats -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- .request_area end -->
+
+
+        </div> <!-- .container-fluid end -->
+
+
+
+        <!-- footer area -->
+        <footer class="footer_area">
+        	<div class="row">
+        		<div class="col-md-6">
+        			<center><p>Copyright &copy; hemoglobin all right 2020 </p></center>
+        		</div>
+        		<div class="col-md-6">
+        			<center><p>Developed By: <a href="https://www.facebook.com/profile.php?id=100005716578252" target="_blank">Md. Masud Rana</a> </p></center>
+        		</div>
+        	</div>
+        </footer>
+
+
+		
+	</section> <!-- .main_section end -->
+
+
+    <!-- REQUIRED SCRIPTS -->
+	<script type="text/javascript" src="../../js/jQuery-v2.2.4.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../js/fontawesome.min.js"></script>
+	<script type="text/javascript" src="../../js/chart.js"></script>
+    <script type="text/javascript" src="../../js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            $('#MyTable').DataTable();
+            $('#MyTable2').DataTable();
+        } );
+    </script>
+
+</body>
+</html>
+

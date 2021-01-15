@@ -41,7 +41,7 @@ ul{
 	2. header css
    ======================================================================= */
 .header_area{
-	background: #fff;
+	background: #D2D6DE;
     border-bottom: 1px solid #e8e9ed;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -49,7 +49,7 @@ ul{
     padding: 0 30px;
     height: 55px;
     position: fixed;
-    left: 203px;
+    left: 200px;
     right: 0;
     top: 0;
     z-index: 999;
@@ -191,7 +191,7 @@ ul{
 
 
 .main_section{
-	margin-left: 203px;
+	margin-left: 200px;
     margin-top: 55px;
     background-color: #F1F2F7;
     padding-top: 30px;
