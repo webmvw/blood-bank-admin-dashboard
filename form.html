@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Theme title-->
+     <title>Hemoglobin | Dashboard</title>
+
+    <!-- all included css file link -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+
+
+    <!-- Theme style -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+     <!-- Navbar -->
+	<aside class="sidebar_area">
+        <div class="sidebar-image">
+            <img src="images/logo.png" alt="logo image">
+        </div>
+		<ul>
+			<li><a href="index.html"><i class="menu-icon fa fa-laptop"></i> Dashboard</a></li>
+			<li><a href="pages/donor/donor.html"><i class="fa fa-bars"></i> Donor</a></li>
+			<li><a href="pages/request/request.html"><i class="fa fa-bell"></i> Request</a></li>
+			<li><a href="pages/stock/stock.html"><i class="fa fa-fire"></i> Stock</a></li>
+			<li><a href="form.html" class="active"><i class="fa fa-bars"></i> Form</a></li>
+			<li><a href=""><i class="fa fa-exclamation-triangle"></i> LogOut</a></li>
+		</ul>
+	</aside>
+
+
+    <!-- page main section -->
+	<section class="main_section">
+
+         <!-- header -->
+        <header class="header_area">
+            <div class="search">
+                <form>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Search here..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <button type="submit" class="input-group-text btn btn-sm" id="basic-addon2">Search</span>
+                    </div>
+                </form>
+            </div>
+            <div class="header_right">
+
+                <div class="profile">
+                    <img src="images/admin.jpg" alt="profile image">
+                </div>
+
+                <div class="notification">
+                    <a href="">
+                        <i class="fa fa-bell"></i>
+                        <span class="count bg-danger">13</span>
+                    </a>
+                </div>
+
+                <div class="massage">
+                    <a href="">
+                        <i class="fa fa-envelope"></i>
+                        <span class="count bg-primary">14</span>
+                    </a>
+                </div>
+                
+
+            </div> <!-- .header_right end -->
+        </header> <!-- .header_area end -->
+
+		
+
+        <div class="container-fluid">
+
+
+            <!-- content for donor html file -->
+            <div class="request_area">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between">
+                                <h4 class="box-title">Add New Donor</h4>
+                                <a href="pages/donor/donor.html" class="btn btn-info btn-sm"><i class="fa fa-bars"></i> Donor</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-stats order-table ov-h">
+                                    <div class="col-8 offset-2">
+                                        <form>
+                                           <div class="form-group">
+                                            <label for="name" >Name</label>
+                                            <input type="Text" class="form-control form-control-sm" id="name" placeholder="Enter Name">
+                                          </div> 
+
+                                          <div class="form-group">
+                                            <label for="blood">Blood</label>
+                                            <select class="form-control form-control-sm" id="blood">
+                                              <option>A+</option>
+                                              <option>A-</option>
+                                              <option>B+</option>
+                                              <option>B-</option>
+                                              <option>O+</option>
+                                              <option>O-</option>
+                                              <option>AB+</option>
+                                              <option>AB-</option>
+                                            </select>
+                                          </div> 
+
+                                          <div class="form-group">
+                                            <label for="phone">Phone</label>
+                                            <input type="number" class="form-control form-control-sm" id="phone" placeholder="Enter Phone">
+                                          </div> 
+
+                                          <div class="form-group">
+                                            <label for="address">Address</label>
+                                            <input type="Text" class="form-control form-control-sm" id="address" placeholder="Enter Address">
+                                          </div> 
+
+                                          <div class="form-group">
+                                            <label for="district">District</label>
+                                            <input type="Text" class="form-control form-control-sm" id="district" placeholder="Enter District">
+                                          </div>
+
+                                          <div class="form-group">
+                                            <label for="division">Division</label>
+                                            <input type="Text" class="form-control form-control-sm" id="division" placeholder="Enter Division">
+                                          </div>  
+
+                                          <div class="form-group">
+                                            <label for="email">Email address</label>
+                                            <input type="email" class="form-control form-control-sm" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                          </div>
+
+                                          <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                </div> <!-- /.table-stats -->
+                            </div>
+                            <div class="card-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .request_area end -->
+
+
+
+        </div> <!-- .container-fluid end -->
+
+
+
+        <!-- footer area -->
+        <footer class="footer_area">
+        	<div class="row">
+        		<div class="col-md-6">
+        			<center><p>Copyright &copy; hemoglobin all right 2020 </p></center>
+        		</div>
+        		<div class="col-md-6">
+        			<center><p>Developed By: <a href="https://www.facebook.com/profile.php?id=100005716578252" target="_blank">Md. Masud Rana</a> </p></center>
+        		</div>
+        	</div>
+        </footer>
+
+
+		
+	</section> <!-- .main_section end -->
+
+
+    <!-- REQUIRED SCRIPTS -->
+	<script type="text/javascript" src="js/jQuery-v2.2.4.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/fontawesome.min.js"></script>
+	<script type="text/javascript" src="js/chart.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            $('#MyTable').DataTable();
+            $('#MyTable2').DataTable();
+        } );
+    </script>
+
+</body>
+</html>
+
