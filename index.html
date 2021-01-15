@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Theme title-->
+     <title>Hemoglobin | Dashboard</title>
+
+    <!-- all included css file link -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+
+
+    <!-- Theme style -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+     <!-- Navbar -->
+	<aside class="sidebar_area">
+        <div class="sidebar-image">
+            <img src="images/logo.png" alt="logo image">
+        </div>
+		<ul>
+			<li><a href="index.html" class="active"><i class="menu-icon fa fa-laptop"></i> Dashboard</a></li>
+			<li><a href=""><i class="fa fa-bars"></i> Donor</a></li>
+			<li><a href=""><i class="fa fa-bell"></i> Request</a></li>
+			<li><a href=""><i class="fa fa-envelope"></i> Massage</a></li>
+			<li><a href=""><i class="fa fa-puzzle-piece"></i> Event</a></li>
+			<li><a href=""><i class="fa fa-th"></i> Noties</a></li>
+			<li><a href=""><i class="fa fa-fire"></i> Stock</a></li>
+			<li><a href=""><i class="fa fa-bars"></i> Review</a></li>
+			<li><a href=""><i class="fa fa-exclamation-triangle"></i> LogOut</a></li>
+		</ul>
+	</aside>
+
+
+    <!-- page main section -->
+	<section class="main_section">
+
+         <!-- header -->
+        <header class="header_area">
+            <div class="search">
+                <form>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Search here..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <button type="submit" class="input-group-text btn btn-sm" id="basic-addon2">Search</span>
+                    </div>
+                </form>
+            </div>
+            <div class="header_right">
+
+                <div class="profile">
+                    <img src="images/admin.jpg" alt="profile image">
+                </div>
+
+                <div class="notification">
+                    <a href="">
+                        <i class="fa fa-bell"></i>
+                        <span class="count bg-danger">13</span>
+                    </a>
+                </div>
+
+                <div class="massage">
+                    <a href="">
+                        <i class="fa fa-envelope"></i>
+                        <span class="count bg-primary">14</span>
+                    </a>
+                </div>
+                
+
+            </div> <!-- .header_right end -->
+        </header> <!-- .header_area end -->
+
+		
+
+        <div class="container-fluid">
+            <!-- Widgets  -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="images/icon.png" alt="blood icon">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-left">
+                                        <h3>206</h3>
+                                        <p>Donor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="images/icon.png" alt="blood icon">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-left">
+                                        <h3>50</h3>
+                                        <p>Blood Stock</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="images/icon.png" alt="blood icon">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-left">
+                                        <h3>128</h3>
+                                        <p>Request</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="images/icon.png" alt="blood icon">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-left">
+                                        <h3>52</h3>
+                                        <p>Review</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Widgets -->
+
+
+            <!-- chart -->
+            <div class="chart">
+                <script>
+                    window.onload = function () {
+
+                    var options = {
+                        title: {
+                            text: "Hemoglobin Blood Bank System"
+                        },
+                        subtitles: [{
+                            text: ""
+                        }],
+                        animationEnabled: true,
+                        data: [{
+                            type: "pie",
+                            startAngle: 40,
+                            toolTipContent: "<b>{label}</b>: {y}%",
+                            showInLegend: "true",
+                            legendText: "{label}",
+                            indexLabelFontSize: 16,
+                            indexLabel: "{label} - {y}%",
+                            dataPoints: [
+                                { y: 55.20, label: "Total Donor" },
+                                { y: 20, label: "A+" },
+                                { y: 10.37, label: "A-" },
+                                { y: 6.98, label: "B+" },
+                                {y: 10.00, label: "B-"},
+                                { y: 2.60, label: "O+" },
+                                { y: 1.45, label: "O-" },
+                                { y: 0.79, label: "AB+" },
+                                { y: 0.79, label: "AB-" }
+                            ]
+                        }]
+                    };
+                    $("#chartContainer").CanvasJSChart(options);
+
+                    }
+                    </script>
+                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+            </div> <!-- .chart end -->
+
+
+            <!-- request area -->
+            <div class="request_area">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="box-title">Blood Request</h4>
+                            </div>
+                            <div class="card-body--">
+                                <div class="table-stats order-table ov-h">
+                                    <table class="table ">
+                                        <thead>
+                                            <tr>
+                                                <th class="serial">#</th>
+                                                <th class="avatar">Avatar</th>
+                                                <th>Name</th>
+                                                <th>Blood</th>
+                                                <th>Quantity</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="serial">1.</td>
+                                                <td class="avatar">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/1.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>  <span class="name">Louis Stanley</span> </td>
+                                                <td> <span class="product">O+</span> </td>
+                                                <td><span class="count">2</span></td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm">Accept</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="serial">2.</td>
+                                                <td class="avatar">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/2.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>  <span class="name">Gregory Dixon</span> </td>
+                                                <td> <span class="product">AB-</span> </td>
+                                                <td><span class="count">1</span></td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm">Accept</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="serial">3.</td>
+                                                <td class="avatar">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/3.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>  <span class="name">Catherine Dixon</span> </td>
+                                                <td> <span class="product">B+</span> </td>
+                                                <td><span class="count">2</span></td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm">Accept</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="serial">4.</td>
+                                                <td class="avatar">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/4.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>  <span class="name">Mary Silva</span> </td>
+                                                <td> <span class="product">A+</span> </td>
+                                                <td><span class="count">2</span></td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm">Accept</button>
+                                                </td>
+                                            </tr>
+                                            <tr class=" pb-0">
+                                                <td class="serial">5.</td>
+                                                <td class="avatar pb-0">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/6.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>  <span class="name">Johnny Stephens</span> </td>
+                                                <td> <span class="product">AB+</span> </td>
+                                                <td><span class="count">1</span></td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm">Accept</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> <!-- /.table-stats -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="box-title">Unread Massage</h4>
+                            </div>
+                            <div class="card-body--">
+                                <div class="table-stats order-table ov-h">
+                                    <table class="table ">
+                                        <thead>
+                                            <tr>
+                                                <th class="avatar">Avatar</th>
+                                                <th>Title</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="avatar">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/1.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>  <span class="name">Louis Stanley</span> </td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm">Read</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="avatar">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/2.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>  <span class="name">Gregory Dixon</span> </td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm">Read</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="avatar">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/3.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>  <span class="name">Catherine Dixon</span> </td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm">Read</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="avatar">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/4.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>  <span class="name">Mary Silva</span> </td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm">Read</button>
+                                                </td>
+                                            </tr>
+                                            <tr class=" pb-0">
+                                                <td class="avatar pb-0">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/6.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>  <span class="name">Johnny Stephens</span> </td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm">Read</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> <!-- /.table-stats -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .request_area end -->
+
+        </div> <!-- .container-fluid end -->
+
+
+
+        <!-- footer area -->
+        <footer class="footer_area">
+        	<div class="row">
+        		<div class="col-md-6">
+        			<center><p>Copyright &copy; hemoglobin all right 2020 </p></center>
+        		</div>
+        		<div class="col-md-6">
+        			<center><p>Developed By: <a href="">Md. Masud Rana</a> </p></center>
+        		</div>
+        	</div>
+        </footer>
+
+
+		
+	</section> <!-- .main_section end -->
+
+
+    <!-- REQUIRED SCRIPTS -->
+	<script type="text/javascript" src="js/jQuery-v2.2.4.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/fontawesome.min.js"></script>
+	<script type="text/javascript" src="js/chart.js"></script>
+
+</body>
+</html>
+

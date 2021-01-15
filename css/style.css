@@ -1,0 +1,213 @@
+
+/*
+	template namw: portfolio website;
+	Author: Md. Masud Rana;
+	Author Url: https://www.youtube.com/channel/UC0wr89s_815dVwiMqHknVGw?view_as=subscriber;
+	Version: 1.0;
+
+	table of content
+	------------------------
+	1. core css
+	2. header css
+	3. sidebar css
+
+*/
+
+body{
+	background-color: #fff;
+}
+
+p, h1, h2, h3{
+	margin-bottom: 0px;
+}
+
+a{
+	text-decoration: none
+}
+ul{
+	margin:0px;
+	padding: 0px;
+	list-style: none;
+}
+
+
+
+
+
+
+
+
+/* ========================================================================
+	2. header css
+   ======================================================================= */
+.header_area{
+	background: #fff;
+    border-bottom: 1px solid #e8e9ed;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    clear: both;
+    padding: 0 30px;
+    height: 55px;
+    position: fixed;
+    left: 203px;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.search{
+    width: 40%;
+    float: left;
+    margin-top: 8px;
+    margin-left: 50px;
+}
+.header_right{
+	width: 40%;
+	float: right;
+	margin-top:4px;
+}
+
+.notification{
+	float: right;
+    position: relative;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.notification i{
+	font-size: 15px;
+    color: #99ABB4;
+    margin-top:15px;
+}
+.notification span{
+	position: absolute;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 14px;
+    top: -3px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+}
+
+.massage{
+	float: right;
+    position: relative;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.massage i{
+	font-size: 15px;
+    color: #99ABB4;
+    margin-top:15px;
+}
+.massage span{
+	position: absolute;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 14px;
+    top: -3px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+}
+
+.profile{
+	float: right;
+}
+.profile img{
+	width: 45px;
+    height: 45px;
+    border-radius: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ========================================================================
+	3. sidebar css
+   ======================================================================= */
+
+.sidebar_area{
+	background: #343A40;
+    height: 100vh;
+    padding-left: 30px;
+    vertical-align: top;
+    width: 200px;
+    -webkit-box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: ;
+    z-index: 999;
+}
+.sidebar_area ul{
+	margin:0px;
+	padding: 0px;
+	list-style: none;
+}
+.sidebar_area ul li{}
+.sidebar_area ul li a{
+	color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 26px;
+    padding: 8px 0;
+    padding-left: 10px;
+    width: 100%;
+    text-decoration: none;
+}
+.sidebar_area ul li a:hover{
+	background-color: #484D53;
+	color:#fff !important;
+}
+.sidebar_area ul li a i{
+	color: #fff;
+    float: left;
+    margin-top: 8px;
+    width: 30px;
+    text-align: left;
+    font-size: 14px;
+}
+.active{
+	background-color: #484D53;
+	color:#fff !important;
+}
+
+.sidebar-image img{
+    margin: 15px 0px;
+    width: 140px;
+}
+
+
+
+
+.main_section{
+	margin-left: 203px;
+    margin-top: 55px;
+    background-color: #F1F2F7;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.chart{
+	margin-top:30px;
+	margin-bottom: 30px;
+}
+
+
+
+
+.footer_area{
+	background-color: #fff;
+	margin-top:30px;
+	padding:15px 0px;
+}
