@@ -91,15 +91,15 @@
                             <div class="card-body">
                                 <div class="table-stats order-table ov-h">
                                     <div class="col-8 offset-2">
-                                        <form>
+                                        <form id="validateForm">
                                            <div class="form-group">
                                             <label for="name" >Name</label>
-                                            <input type="Text" class="form-control form-control-sm" id="name" placeholder="Enter Name">
+                                            <input type="Text" name="name" class="form-control form-control-sm" id="name" placeholder="Enter Name">
                                           </div> 
 
                                           <div class="form-group">
                                             <label for="blood">Blood</label>
-                                            <select class="form-control form-control-sm" id="blood">
+                                            <select class="form-control form-control-sm" name="blood" id="blood">
                                               <option>A+</option>
                                               <option>A-</option>
                                               <option>B+</option>
@@ -113,27 +113,27 @@
 
                                           <div class="form-group">
                                             <label for="phone">Phone</label>
-                                            <input type="number" class="form-control form-control-sm" id="phone" placeholder="Enter Phone">
+                                            <input type="number" class="form-control form-control-sm" name="phone" id="phone" placeholder="Enter Phone">
                                           </div> 
 
                                           <div class="form-group">
                                             <label for="address">Address</label>
-                                            <input type="Text" class="form-control form-control-sm" id="address" placeholder="Enter Address">
+                                            <input type="Text" class="form-control form-control-sm" id="address" name="address" placeholder="Enter Address">
                                           </div> 
 
                                           <div class="form-group">
                                             <label for="district">District</label>
-                                            <input type="Text" class="form-control form-control-sm" id="district" placeholder="Enter District">
+                                            <input type="Text" class="form-control form-control-sm" id="district" name="district" placeholder="Enter District">
                                           </div>
 
                                           <div class="form-group">
                                             <label for="division">Division</label>
-                                            <input type="Text" class="form-control form-control-sm" id="division" placeholder="Enter Division">
+                                            <input type="Text" class="form-control form-control-sm" id="division" name="division" placeholder="Enter Division">
                                           </div>  
 
                                           <div class="form-group">
                                             <label for="email">Email address</label>
-                                            <input type="email" class="form-control form-control-sm" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                                            <input type="email" class="form-control form-control-sm" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                           </div>
 
@@ -178,6 +178,7 @@
 	<script type="text/javascript" src="js/fontawesome.min.js"></script>
 	<script type="text/javascript" src="js/chart.js"></script>
     <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/form-validator.js"></script>
     <script type="text/javascript">
 
         $(document).ready(function() {
@@ -185,6 +186,53 @@
             $('#MyTable2').DataTable();
         } );
     </script>
+
+    <script>
+            $(function () {
+                $("#validateForm").validate({
+                    // Specify the validation rules
+                    rules: {
+                        name:"required",
+                        blood:"required",
+                        phone:{
+                            required:true,
+                            number:true,
+                            maxlength:11,
+                        },
+                        address:"required",
+                        district:"required",
+                        division:"required",
+                        email:{
+                            required:true,
+                            email:true,
+                        },
+                        
+                    },
+                    // Specify the validation error messages
+                    messages: {
+                        name:"Please enter your name!",
+                        blood:"Please select your blood!",
+                        phone:{
+                            required:"Please enter phone number!",
+                            number:"Invaid phone number!",
+                            maxlength:"Please enter no more than 10 characters..",
+                        },
+                        address:"Please enter your address!",
+                        district:"Please enter your district!",
+                        division:"Please enter your division!",
+
+                        email:{
+                            required:"Please enter address!",
+                            email:"Invaild email address!",
+                        },
+                        
+                    },
+                    submitHandler: function (form) {
+                        form.submit();
+                    }
+                });
+            });
+        </script>
 
 </body>
 </html>
