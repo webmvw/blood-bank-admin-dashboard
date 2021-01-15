@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
 
 
     <!-- Theme style -->
@@ -27,7 +28,7 @@
         </div>
 		<ul>
 			<li><a href="index.html" class="active"><i class="menu-icon fa fa-laptop"></i> Dashboard</a></li>
-			<li><a href=""><i class="fa fa-bars"></i> Donor</a></li>
+			<li><a href="donor.html"><i class="fa fa-bars"></i> Donor</a></li>
 			<li><a href=""><i class="fa fa-bell"></i> Request</a></li>
 			<li><a href=""><i class="fa fa-envelope"></i> Massage</a></li>
 			<li><a href=""><i class="fa fa-puzzle-piece"></i> Event</a></li>
@@ -399,6 +400,14 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/fontawesome.min.js"></script>
 	<script type="text/javascript" src="js/chart.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            $('#MyTable').DataTable();
+            $('#MyTable2').DataTable();
+        } );
+    </script>
 
 </body>
 </html>
